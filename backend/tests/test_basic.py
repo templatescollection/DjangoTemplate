@@ -3,6 +3,8 @@
 from django.test import TestCase
 from django.urls import reverse
 
+REDIRECT = 302
+
 
 class BasicTestCase(TestCase):
     """Basic test cases for the Django application."""
@@ -12,9 +14,9 @@ class BasicTestCase(TestCase):
         url = reverse("admin:index")
         response = self.client.get(url)
         # Should redirect to login page
-        self.assertEqual(response.status_code, 302)
+        assert response.status_code == REDIRECT  # noqa: S101
 
     def test_health_check(self) -> None:
         """Test basic health check."""
         # This is a placeholder - add actual health check endpoint test
-        self.assertTrue(True)
+        assert True  # noqa: S101

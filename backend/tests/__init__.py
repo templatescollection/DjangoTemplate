@@ -15,7 +15,7 @@ if not settings.configured:
             "django.contrib.auth",
             "django.contrib.contenttypes",
         ],
-        SECRET_KEY="test-secret-key",
+        SECRET_KEY="test-secret-key",  # noqa: S106
         USE_TZ=True,
     )
 

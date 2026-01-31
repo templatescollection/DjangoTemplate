@@ -1,6 +1,6 @@
 import sys
 
-import requests
+import requests  # type: ignore[import-untyped]
 
 try:
     # Attempt to access the health endpoint
