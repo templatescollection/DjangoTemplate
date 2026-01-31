@@ -67,15 +67,11 @@ jobs:
 
       - name: Install dependencies
         working-directory: backend
-        run: uv sync --extra dev
-
-      - name: Run safety check
-        working-directory: backend
-        run: uv run pip install safety && uv run safety check --full-report
+        run: uv sync --extra sec
 
       - name: Run bandit security linter
         working-directory: backend
-        run: uv run pip install bandit && uv run bandit -r . -f json -o bandit-report.json
+        run: uv run bandit -c bandit.yml -r . -f json -o bandit-report.json
 
       - name: Upload security reports
         uses: actions/upload-artifact@v4
