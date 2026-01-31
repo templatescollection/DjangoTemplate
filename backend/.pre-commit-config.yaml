@@ -26,6 +26,18 @@ repos:
       - id: mypy
         additional_dependencies: [django-stubs]
 
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.6
+    hooks:
+      - id: bandit
+        args: ["-c", ".bandit.yaml", "-r", "."]
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    rev: v1.3.3
+    hooks:
+      - id: python-safety-dependencies-check
+        files: .*/requirements.*\\.txt$
+
   - repo: https://github.com/astral-sh/uv-pre-commit
     # uv version.
     rev: 0.9.18

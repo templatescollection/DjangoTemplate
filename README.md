@@ -8,7 +8,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-6.0+-green.svg)](https://www.djangoproject.com/)
-[![Docker](https://img.shields.io/badge/Docker-Supported-blue?logo=docker)](https://www.docker.com/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![Type checking: mypy](https://img.shields.io/badge/type%20checking-mypy-blue.svg)](https://github.com/python/mypy)
 [![Coverage](https://codecov.io/gh/templatescollection/DjangoTemplate/branch/main/graph/badge.svg)](https://codecov.io/gh/templatescollection/DjangoTemplate)
