@@ -28,7 +28,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: backend
-        run: uv sync --extra dev
+        run: uv sync --group dev
 
       - name: Run Django system checks
         working-directory: backend
@@ -67,7 +67,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: backend
-        run: uv sync --extra sec
+        run: uv sync --group sec
 
       - name: Run bandit security linter
         working-directory: backend
