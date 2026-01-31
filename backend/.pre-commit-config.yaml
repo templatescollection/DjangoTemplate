@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -10,7 +10,7 @@ repos:
       - id: debug-statements
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.10
+    rev: v0.14.14
     hooks:
       # Run the linter.
       - id: ruff-check
@@ -27,20 +27,20 @@ repos:
         additional_dependencies: [django-stubs]
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.6
+    rev: 1.9.3
     hooks:
       - id: bandit
         args: ["-c", "backend/bandit.yml", "-r", "."]
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    rev: v1.3.3
+    rev: v1.4.2
     hooks:
       - id: python-safety-dependencies-check
         files: .*/requirements.*\\.txt$
 
   - repo: https://github.com/astral-sh/uv-pre-commit
     # uv version.
-    rev: 0.9.18
+    rev: 0.9.28
     hooks:
       - id: uv-lock
       - id: uv-export

@@ -21,22 +21,16 @@ dependencies = [
     { name = "gunicorn" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "coverage" },
     { name = "django-stubs" },
-    { name = "mypy" },
+    { name = "mypy", extra = ["faster-cache", "reports"] },
     { name = "pre-commit" },
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "pytest-django" },
     { name = "ruff" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "mypy", extra = ["faster-cache", "reports"] },
-    { name = "pre-commit" },
 ]
 sec = [
     { name = "bandit" },
@@ -44,24 +38,23 @@ sec = [
 
 [package.metadata]
 requires-dist = [
-    { name = "coverage", marker = "extra == 'dev'", specifier = ">=7.0.0" },
     { name = "django", specifier = ">=6.0.0" },
-    { name = "django-stubs", marker = "extra == 'dev'", specifier = ">=5.0.0" },
     { name = "djangorestframework", specifier = ">=3.16.0" },
     { name = "gunicorn", specifier = ">=23.0.0" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.0.0" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.0.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.0.0" },
-    { name = "pytest-django", marker = "extra == 'dev'", specifier = ">=4.8.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.1.0" },
 ]
-provides-extras = ["dev"]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "coverage", specifier = ">=7.0.0" },
+    { name = "django-stubs", specifier = ">=5.0.0" },
+    { name = "mypy", specifier = ">=1.0.0" },
     { name = "mypy", extras = ["faster-cache", "reports"], specifier = ">=1.19.1" },
+    { name = "pre-commit", specifier = ">=3.0.0" },
     { name = "pre-commit", specifier = ">=4.5.1" },
+    { name = "pytest", specifier = ">=7.0.0" },
+    { name = "pytest-cov", specifier = ">=4.0.0" },
+    { name = "pytest-django", specifier = ">=4.8.0" },
+    { name = "ruff", specifier = ">=0.1.0" },
 ]
 sec = [{ name = "bandit", specifier = ">=1.9.3" }]
 
