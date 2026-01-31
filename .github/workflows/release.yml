@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: backend
-        run: uv sync --extra dev
+        run: uv sync --group dev
 
       - name: Run tests
         working-directory: backend

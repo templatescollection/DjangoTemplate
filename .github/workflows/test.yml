@@ -10,8 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
-       matrix:
-         python-version: ["3.13"]
+      matrix:
+        python-version: ["3.13"]
 
     services:
       postgres:
@@ -48,7 +48,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: backend
-        run: uv sync --extra dev
+        run: uv sync --group dev
 
       - name: Run Django migrations
         working-directory: backend
